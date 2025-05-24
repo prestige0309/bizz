@@ -613,27 +613,39 @@ footer {
         display: none;
     }
     .imagecontainer {
-        width: 100%;
-        position: relative;
-    }
-   .webusiness {
-   position: absolute;
-   top: -120px;
-   left: -80px;
-   font-size: 20px;
-   line-height: 25px;
-    }
-    .we {
-        font-size: 10px;
-        color: rgb(66, 66, 190);
-    }
-    .box {
-        bottom: 300px;
-        margin: 0 20px 0 20px;
-    }
-    .mission {
-        margin-top: 300px;
-    }
+    width: 100%;
+    position: relative;
+    min-height: 750px; /* Increased from 600px */
+  }
+
+  .webusiness {
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    font-size: 22px;
+    line-height: 30px;
+    z-index: 2;
+  }
+
+  .box {
+    position: absolute;
+    bottom: -160px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    z-index: 3;
+  }
+
+  .boxes {
+    width: 90%;
+  }
+
+  .mission {
+    margin-top: 330px; /* Increase this to clear the floating boxes */
+    padding: 0 20px;
+  }
     .ours {
         display: flex;
         flex-direction: column;

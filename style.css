@@ -615,16 +615,14 @@ footer {
     .imagecontainer {
     width: 100%;
     position: relative;
-    min-height: 500px; /* Increased from 600px */
   }
 
   .webusiness {
     position: absolute;
-    top: 40px;
-    left: 20px;
-    font-size: 22px;
-    line-height: 30px;
-    z-index: 2;
+   top: -120px;
+   left: -80px;
+   font-size: 20px;
+   line-height: 25px;
   }
 
   .box {

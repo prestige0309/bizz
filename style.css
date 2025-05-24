@@ -615,7 +615,7 @@ footer {
     .imagecontainer {
     width: 100%;
     position: relative;
-    min-height: 750px; /* Increased from 600px */
+    min-height: 500px; /* Increased from 600px */
   }
 
   .webusiness {

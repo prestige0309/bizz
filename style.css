@@ -2,6 +2,7 @@ body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: rgb(13, 13, 24);
+    position: relative;
 }
 /* image container  */
 .imagecontainer {
@@ -619,7 +620,82 @@ footer {
 .hour {
     margin-top: 50px;
 }
-/* shortcuts  */
+/* menu-bar */
+.menu-bar {
+    height: 50px;
+    background-color: rgb(13, 13, 24);
+    /* width: 100%; */
+    justify-content: space-between;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+.menu-logo {
+    width: 40%;
+}
+.bars {
+    color: whitesmoke;
+    font-size: 20px;
+    background-color: rgb(70, 70, 214);
+    padding: 7px 10px 7px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+}
+.bars:hover {
+    background-color: white;
+    color: rgb(70, 70, 214);
+    display: flex;
+    
+}
+.bars:hover .menu-nav {
+    visibility: visible;
+     
+}
+.menu-nav {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    visibility: hidden;
+}
+
+.cancel {
+    width: 20%;
+    height: 500px;
+    /* background-color: red; */
+}
+.menu-details {
+    width: 80%;
+    height: 500px;
+    /* background-color: brown; */
+    background-image: url(BIZ/we2.jpg);
+    background-size: cover;
+    
+}
+.menu-home {
+    line-height: 50px;
+    font-weight: 300;
+    margin-left: 10px;
+    }
+.homeeee {
+    transition: transform 0.5s ease-in-out;
+}
+.homeeee:hover  {
+    transform: translateX(10px);
+    color: rgb(7, 49, 139);
+}
+.x-cancel {
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+    cursor: pointer; /* <-- adds pointer on hover */
+    
+}
 
 /* media query  */
 @media (min-width: 320px) and (max-width: 480px){
@@ -707,5 +783,7 @@ footer {
         width: 5px;
         margin: 20px;
     }
-    
+    .menu-bar {
+        display: flex;
+    }
 }

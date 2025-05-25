@@ -9,6 +9,26 @@
 </head>
 <body>
     <!-- image container  -->
+    <div class="menu-nav">
+        <div class="cancel">
+            <div class="x-cancel">X</div>
+        </div>
+        <div class="menu-details">
+            <div class="menu-home">
+                <div class="homeeee"><a href="" >HOME</a></div>
+                <div class="homeeee"><a href="">ABOUT</a></div>
+                <div class="homeeee"><a href="#ourexpert">SERVICES</a></div>
+                <div class="homeeee"><a href="">BLOG</a></div>
+                <div class="homeeee"><a href="">SHOP</a></div>
+                <div class="homeeee"><a href="">FAQ</a></div>
+                <div class="homeeee"><a href="#footer">CONTACT</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-bar">
+        <div><a href=""><img src="BIZ/logo-removebg-preview.png" alt="" class="menu-logo"></a></div>
+        <div><i class="fas fa-bars bars"></i></div>
+    </div>
     <div class="imagecontainer">
         <img src="./BIZ/image 1.jpg" alt="" class="image1">
         <div class="navbar">
@@ -393,4 +413,30 @@
         </div>
        </footer>
 </body>
+<script>
+    const bars = document.querySelector('.bars');
+    const menuNav = document.querySelector('.menu-nav');
+    const xCancel = document.querySelector('.x-cancel');
+  
+    bars.addEventListener('mouseover', () => {
+      menuNav.style.visibility = 'visible';
+    });
+  
+    bars.addEventListener('mouseout', () => {
+      setTimeout(() => {
+        if (!menuNav.matches(':hover')) {
+          menuNav.style.visibility = 'hidden';
+        }
+      }, 200);
+    });
+  
+    menuNav.addEventListener('mouseleave', () => {
+      menuNav.style.visibility = 'hidden';
+    });
+  
+    // Hover on .x-cancel hides menu-nav
+    xCancel.addEventListener('mouseenter', () => {
+      menuNav.style.visibility = 'hidden';
+    });
+  </script>
 </html>

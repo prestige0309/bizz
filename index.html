@@ -9,26 +9,38 @@
 </head>
 <body>
     <!-- image container  -->
-    <div class="menu-nav">
-        <div class="cancel">
-            <div class="x-cancel">X</div>
-        </div>
-        <div class="menu-details">
-            <div class="menu-home">
-                <div class="homeeee"><a href="" >HOME</a></div>
-                <div class="homeeee"><a href="biz about.html">ABOUT</a></div>
-                <div class="homeeee"><a href="biz service.html">SERVICES</a></div>
-                <div class="homeeee"><a href="">BLOG</a></div>
-                <div class="homeeee"><a href="">SHOP</a></div>
-                <div class="homeeee"><a href="">FAQ</a></div>
-                <div class="homeeee"><a href="#footer">CONTACT</a></div>
-            </div>
-        </div>
+   <!-- Mobile Navigation -->
+<div class="mobile-nav">
+    <div class="mobile-nav-header">
+      <a href="index.html" class="mobile-logo">
+        <img src="BIZ/logo-removebg-preview.png" alt="Company Logo">
+      </a>
+      <button class="mobile-menu-toggle">
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+        <span class="hamburger"></span>
+      </button>
     </div>
-    <div class="menu-bar">
-        <div><a href=""><img src="BIZ/logo-removebg-preview.png" alt="" class="menu-logo"></a></div>
-        <div><i class="fas fa-bars bars"></i></div>
-    </div>
+    
+    <nav class="mobile-menu">
+      <ul class="mobile-menu-list">
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="biz about.html">ABOUT</a></li>
+        <li><a href="biz service.html">SERVICES</a></li>
+        <li><a href="#">BLOG</a></li>
+        <li><a href="#">SHOP</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+      </ul>
+      
+      <div class="mobile-social">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="mobile-phone">+1 (800) 334455</a>
+      </div>
+    </nav>
+  </div>
     <div class="imagecontainer">
         <img src="./BIZ/image 1.jpg" alt="" class="image1">
         <div class="navbar">
@@ -36,8 +48,8 @@
             <div><a href=""><img src="./BIZ/logo-removebg-preview.png" alt="" class="logo"></a></div>
             <div class="home">
                 <div><a href="">HOME</a></div>
-                <div><a href="">ABOUT</a></div>
-                <div><a href="#ourexpert">SERVICES</a></div>
+                <div><a href="biz about.html">ABOUT</a></div>
+                <div><a href="biz service.html">SERVICES</a></div>
                 <div><a href="">BLOG</a></div>
                 <div><a href="">SHOP</a></div>
                 <div><a href="">FAQ</a></div>
@@ -51,7 +63,7 @@
                 <div><a href="" class="number">+1 (800) 334455 </a></div>
             </div>
         </div>
-         <!-- we are in  -->
+         
         <div class="webusiness">
             <h2>
                 <span class="we">WE ARE EXPERT IN </span><br>
@@ -120,7 +132,7 @@
     </div>
     </div>
     <!-- our servives  -->
-    <div class="service">
+    <div class="service" id="serv">
         <h1 class="he">OUR SERVICES</h1>
         <div class="ourservice">
         <div class="ours">
@@ -412,31 +424,9 @@
         </div>
         </div>
        </footer>
+       <div class="on-mobile"></div>
+       <script src="js.js"></script>
 </body>
-<script>
-    const bars = document.querySelector('.bars');
-    const menuNav = document.querySelector('.menu-nav');
-    const xCancel = document.querySelector('.x-cancel');
+
   
-    bars.addEventListener('mouseover', () => {
-      menuNav.style.visibility = 'visible';
-    });
-  
-    bars.addEventListener('mouseout', () => {
-      setTimeout(() => {
-        if (!menuNav.matches(':hover')) {
-          menuNav.style.visibility = 'hidden';
-        }
-      }, 200);
-    });
-  
-    menuNav.addEventListener('mouseleave', () => {
-      menuNav.style.visibility = 'hidden';
-    });
-  
-    // Hover on .x-cancel hides menu-nav
-    xCancel.addEventListener('mouseenter', () => {
-      menuNav.style.visibility = 'hidden';
-    });
-  </script>
 </html>

@@ -1,3 +1,127 @@
+/* Mobile Navigation */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: rgb(13, 13, 24);
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+  }
+  
+  .mobile-logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .mobile-menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+  }
+  
+  .hamburger {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+  }
+  
+  /* Menu when open */
+  .mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    background-color: rgb(13, 13, 24);
+  }
+  
+  .mobile-menu.active {
+    max-height: 100vh;
+  }
+  
+  .mobile-menu-list {
+    list-style: none;
+    padding: 0 20px;
+  }
+  
+  .mobile-menu-list li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .mobile-menu-list a {
+    display: block;
+    padding: 15px 0;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .mobile-menu-list a:hover {
+    color: rgb(66, 66, 190);
+  }
+  
+  .mobile-social {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .mobile-social a {
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+  }
+  
+  .mobile-social a:hover {
+    color: rgb(66, 66, 190);
+  }
+  
+  .mobile-phone {
+    background-color: rgb(66, 66, 190);
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s;
+  }
+  
+  .mobile-phone:hover {
+    background-color: white;
+    color: rgb(66, 66, 190);
+  }
+  
+  /* Animation for hamburger to X */
+  .mobile-menu-toggle.active .hamburger:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+  }
+  
+  .mobile-menu-toggle.active .hamburger:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .mobile-menu-toggle.active .hamburger:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+  
+  /* Hide on desktop */
+  @media (min-width: 769px) {
+    .mobile-nav {
+      display: none;
+    }
+  }
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -36,7 +160,7 @@ body {
 .perspective {
     display: flex;
     flex-wrap: wrap;
-    gap: 60px;
+    gap: 40px;
     justify-content: center;
     margin-top: 50px;
 }
@@ -77,7 +201,7 @@ body {
   .card-front {
     background-color: whitesmoke;
     color: black;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
   }
 .lorem {
     font-size: 15px;
@@ -379,6 +503,12 @@ footer {
     .ourservice {
         justify-content: center;
         align-items: center;
+        text-align: center;
+    }
+    .about-us {
+        margin-bottom: 70px;
+    }
+    .about {
         text-align: center;
     }
 }
